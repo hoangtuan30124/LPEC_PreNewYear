@@ -1,22 +1,26 @@
-var sites = [
-    'http://reddit.com',
-    'http://www.google.com',
-    'http://www.stackoverflow.com',
-    'http://www.example.com',
-    'http://www.youtube.com',
-    'http://facebook.com'
-];
-
-function randomSite() {
-    var i = Math.floor(Math.random()*5000)+1
-    if(i == 1410){
-        var index = 0
-    }
-    else if(i<=4500){
-        var index = 1
-    }
-    else if(i <=5000){
-        var index = Math.floor(Math.random()*4)+2
-    }
-    location.href = sites[index];
+// Prefabs
+const sites = {
+    "rickroll": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "winner": "",
+    "recursive": "/",
+    "comeback": "https://www.facebook.com/LPECpage"
+};
+const range = 5000;
+const prize = ["winner","rickroll","recursive","comeback"]
+const prizeRange = {
+    "rickroll": 0,
+    "winner": 1410,
+    "recursive": 2500,
+    "comeback": 4500
 }
+
+//looting machine
+function RandomSite() {
+    var ranNumber = Math.random()*range + 1;
+    // Detect prize whether the winner number showed or not
+    var index = (ranNumber > prizeRange[rickroll]) + (ranNumber > prizeRange[recursive]) + (ranNumber > prizeRange[comeback]);
+    index = index * (ranNumber != prizeRange[winner]); // Check winner
+    location.href = sites[prize[index]]
+}
+
+//Made by LPEC with ❤️
