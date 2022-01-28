@@ -2,7 +2,7 @@
 var sites = {
     "rickroll": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "winner": "prizes/winner.html",
-    "recursive": "?",
+    "recursive": "#",
     "comeback": "https://www.facebook.com/LPECpage"
 };
 const range = 5000;
