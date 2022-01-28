@@ -25,7 +25,7 @@ function checkPrize(number, prizes) {
 
 //looting machine
 function RandomSite() {
-    var ranNumber = Math.random()*range + 1;
+    var ranNumber = Math.round(Math.random()*range) + 1;
     // Detect prize whether the "winner" number showed or not
     var index = checkPrize(ranNumber, prizeRange);
     location.href = sites[prize[index]]
